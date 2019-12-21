@@ -8,16 +8,16 @@ const productRoutes = require("./api/routes/products");
 const orderRoutes = require("./api/routes/orders");
 const userRoutes = require("./api/routes/user");
 
-mongoose.connect("mongodb://localhost/userauthapinew", {
-  useMongoClient: true
-});
+// mongoose.connect("mongodb://localhost/userauthapinew", {
+//   useMongoClient: true
+// });
 
-// mongoose.connect(
-//   "mongodb://chkashif167:Pakistan167@ds211635.mlab.com:11635/heroku_bsmn5nk1",
-//   {
-//     useMongoClient: true
-//   }
-// );
+mongoose.connect(
+  "mongodb://chkashif167:Pakistan167@ds211635.mlab.com:11635/heroku_bsmn5nk1",
+  {
+    useMongoClient: true
+  }
+);
 mongoose.Promise = global.Promise;
 
 app.use(morgan("dev"));
